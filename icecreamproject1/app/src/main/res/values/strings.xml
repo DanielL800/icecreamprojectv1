@@ -1,12 +1,21 @@
 <resources>
     <string name="app_name">HELARTICO</string>
     <string name="img_login">logo</string>
-    <string name="btn_registro">Nuevo Cliente</string>
+    <string name="img_alt">Cono utilizado como Logo</string>
+
+    <string name="TView_bienvenida">¡Bienvenido!</string>
     <string name="edT_email">Correo</string>
     <string name="edT_pass">Contraseña</string>
+    <string name="edTConfirm_pass">Confirmar contraseña</string>
+    <string name="edtNombre">Nombres</string>
+    <string name="edtApellidos">Apellidos</string>
+    <string name="edTDocument">Cedula</string>
+    <string name="edTDocumento">Documento</string>
+    <string name="edTCelular">Celular</string>
+
     <string name="btn_ingreso">Ingresar</string>
     <string name="btn_olvidar">Olvidé mi contraseña</string>
-    <string name="TView_bienvenida">¡Bienvenido!</string>
-    <string name="img_alt">Cono utilizado como Logo</string>
+    <string name="btn_registro">Nuevo Cliente</string>
     <string name="btnVisibility">Visibilida de contraseña</string>
+    <string name="btn_continuar">Continuar</string>
 </resources>

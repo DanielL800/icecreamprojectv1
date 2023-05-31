@@ -3,7 +3,6 @@ package com.example.icecreamproject1.activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.text.LoginFilter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,9 +26,9 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        correo = findViewById(R.id.editTextText);
+        correo = findViewById(R.id.edtApellido);
         password = findViewById(R.id.Text2pass);
-        btnIngreso = findViewById(R.id.Btningresar);
+        btnIngreso = findViewById(R.id.btnContinuar);
         btnRegistro = findViewById(R.id.btnregistro);
 
         btnIngreso.setOnClickListener(new View.OnClickListener() {

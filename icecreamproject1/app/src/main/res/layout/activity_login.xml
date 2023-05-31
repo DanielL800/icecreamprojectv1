@@ -20,12 +20,12 @@
         app:srcCompat="@drawable/helarticologo1" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/edtApellido"
         android:layout_width="240dp"
         android:layout_height="49dp"
         android:backgroundTint="@color/titlesLight"
         android:ems="10"
-        android:hint="@string/edT_email"
+        android:hint="@string/edTDocumento"
         android:inputType="text"
         android:textColor="@color/white"
         android:textColorHint="@color/hintColor"
@@ -71,7 +71,7 @@
         app:layout_constraintVertical_bias="0.405" />
 
     <Button
-        android:id="@+id/Btningresar"
+        android:id="@+id/btnContinuar"
         android:layout_width="194dp"
         android:layout_height="52dp"
         android:backgroundTint="@color/btnclaro"
