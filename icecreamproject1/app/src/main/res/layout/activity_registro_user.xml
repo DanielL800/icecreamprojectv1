@@ -122,4 +122,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.932" />
+
+    <ImageView
+        android:id="@+id/imgVIce1"
+        android:layout_width="229dp"
+        android:layout_height="191dp"
+        app:layout_constraintBottom_toTopOf="@+id/edtNombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/icecreamdossinfondo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
