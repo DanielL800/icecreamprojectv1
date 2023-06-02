@@ -11,11 +11,11 @@
         android:id="@+id/edtCell"
         android:layout_width="240dp"
         android:layout_height="49dp"
+        android:autofillHints="phone"
         android:backgroundTint="@color/titlesLight"
         android:ems="10"
         android:hint="@string/edTCelular"
         android:inputType="phone"
-        android:autofillHints="phone"
         android:textColor="@color/white"
         android:textColorHint="@color/hintColor"
         android:textSize="16sp"
@@ -25,17 +25,17 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.734" />
+        app:layout_constraintVertical_bias="0.772" />
 
     <EditText
         android:id="@+id/edtNombre"
         android:layout_width="240dp"
         android:layout_height="49dp"
+        android:autofillHints="name"
         android:backgroundTint="@color/titlesLight"
         android:ems="10"
         android:hint="@string/edtNombre"
         android:inputType="text"
-        android:autofillHints="name"
         android:textColor="@color/white"
         android:textColorHint="@color/hintColor"
         android:textSize="16sp"
@@ -45,17 +45,17 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.343" />
+        app:layout_constraintVertical_bias="0.429" />
 
     <EditText
-        android:id="@+id/edtApellido"
+        android:id="@+id/edtDoc"
         android:layout_width="240dp"
         android:layout_height="49dp"
+        android:autofillHints="name"
         android:backgroundTint="@color/titlesLight"
         android:ems="10"
         android:hint="@string/edtApellidos"
         android:inputType="text"
-        android:autofillHints="name"
         android:textColor="@color/white"
         android:textColorHint="@color/hintColor"
         android:textSize="16sp"
@@ -65,17 +65,17 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.435" />
+        app:layout_constraintVertical_bias="0.514" />
 
     <EditText
         android:id="@+id/edtCorreo"
         android:layout_width="240dp"
         android:layout_height="49dp"
+        android:autofillHints="emailAddress"
         android:backgroundTint="@color/titlesLight"
         android:ems="10"
         android:hint="@string/edT_email"
         android:inputType="textEmailAddress"
-        android:autofillHints="emailAddress"
         android:textColor="@color/white"
         android:textColorHint="@color/hintColor"
         android:textSize="16sp"
@@ -85,7 +85,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.634" />
+        app:layout_constraintVertical_bias="0.687" />
 
     <EditText
         android:id="@+id/edtDocument"
@@ -105,7 +105,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.536" />
+        app:layout_constraintVertical_bias="0.601" />
 
     <Button
         android:id="@+id/btnContinuar"
@@ -127,6 +127,7 @@
         android:id="@+id/imgVIce1"
         android:layout_width="229dp"
         android:layout_height="191dp"
+        android:contentDescription="@string/img_helado1"
         app:layout_constraintBottom_toTopOf="@+id/edtNombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
