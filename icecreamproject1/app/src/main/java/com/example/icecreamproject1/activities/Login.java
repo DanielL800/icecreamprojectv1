@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.icecreamproject1.R;
@@ -17,10 +20,14 @@ public class Login extends AppCompatActivity {
     private String[] dataUser;
 
     private String user, contrasena;
-    EditText correo;
-    EditText password;
-    Button btnIngreso;
-    Button btnRegistro;
+    private EditText correo;
+     private EditText password;
+    private Button btnIngreso;
+    private Button btnRegistro;
+
+    //Button hiden password
+    private boolean passVisible = false;
+    private ImageButton showPassword; //visibility img
 
 
     @Override
@@ -33,12 +40,32 @@ public class Login extends AppCompatActivity {
         btnIngreso = findViewById(R.id.btnContinuar);
         btnRegistro = findViewById(R.id.btnregistro);
 
+        showPassword = findViewById(R.id.imgBtnvisibility);
+
         btnIngreso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 user = correo.getText().toString();
                 contrasena = password.getText().toString();
                 Toast.makeText(Login.this, "Hola Usuario " + user, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //OCULTACION DE CONTRASEÑA
+        showPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(passVisible){
+                    //Si la contraseña es visible, ocultarla
+                    password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    showPassword.setImageResource(R.drawable.baseline_visibility_off_24);
+                    passVisible = false;
+                }else{
+                    //Si no está visible la contraseña, mostrarla
+                    password.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                    showPassword.setImageResource(R.drawable.baseline_visibility_24);
+                    passVisible = true;
+                }
             }
         });
 
