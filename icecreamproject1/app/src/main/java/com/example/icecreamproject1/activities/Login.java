@@ -24,11 +24,13 @@ public class Login extends AppCompatActivity {
      private EditText password;
     private Button btnIngreso;
     private Button btnRegistro;
+    private ImageButton arrowBack;
 
     //Button hiden password
     private boolean passVisible = false;
     private ImageButton showPassword; //visibility img
 
+    private Button btnForgot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +41,8 @@ public class Login extends AppCompatActivity {
         password = findViewById(R.id.Text2pass);
         btnIngreso = findViewById(R.id.btnContinuar);
         btnRegistro = findViewById(R.id.btnregistro);
-
         showPassword = findViewById(R.id.imgBtnvisibility);
+        btnForgot = findViewById(R.id.btnOlvidar);
 
         btnIngreso.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,13 +61,24 @@ public class Login extends AppCompatActivity {
                     //Si la contraseña es visible, ocultarla
                     password.setTransformationMethod(PasswordTransformationMethod.getInstance());
                     showPassword.setImageResource(R.drawable.baseline_visibility_off_24);
-                    passVisible = false;
+                    //passVisible = false;
                 }else{
                     //Si no está visible la contraseña, mostrarla
-                    password.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                    //password.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                    password.setTransformationMethod(null);
                     showPassword.setImageResource(R.drawable.baseline_visibility_24);
-                    passVisible = true;
+                    //passVisible = true;
                 }
+                passVisible = !passVisible; //Invierte el valor del Boolean
+            }
+        });
+
+        //Inicio activity RECUPERAR CONTRASEÑA
+        btnForgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentPass = new Intent(Login.this, ForgotPassword.class);
+                startActivity(intentPass);
             }
         });
 

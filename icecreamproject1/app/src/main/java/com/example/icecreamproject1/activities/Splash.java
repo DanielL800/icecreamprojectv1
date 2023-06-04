@@ -38,7 +38,7 @@ public class Splash extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 4000);
+        }, 3000);
         contar();
     }
 
@@ -49,7 +49,7 @@ public class Splash extends AppCompatActivity {
             public void run() {
                 FinalizarSplash();
             }
-        }, 3500); //  Segundos
+        }, 3000); //  miliSegundos
     }
     //Este contador es para que pase del splash al login
     public void FinalizarSplash(){ //Se tumba el splash para que ingrese otra Activity (en este caso Login)
