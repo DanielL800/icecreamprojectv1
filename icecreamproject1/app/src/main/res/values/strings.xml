@@ -9,6 +9,7 @@
     <string name="img_goBack">Volver a la ventana anterior</string>
 
     <string name="TView_bienvenida">¡Bienvenido!</string>
+    <string name="tv_crear_contrasena">¡Crea una contraseña segura!</string> //activity olvido contraseña
     <string name="TV_recup_correo">Recibirás un correo para restablecer tu contraseña al correo:</string>
     <string name="TV_recup_celular">Si deseas recibir un código por celular</string>
     <string name="TV_recup_layoutDescription">Recuperar contraseña con numero de celular</string>

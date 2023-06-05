@@ -5,6 +5,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
 import com.example.icecreamproject1.R;
@@ -20,6 +22,9 @@ public class ForgotPassword extends AppCompatActivity {
 
         btnPhone = findViewById(R.id.btnOtroMetodo);
         sectionPhone = findViewById(R.id.recuperarconCelular);
+        Animation animBtn = AnimationUtils.loadAnimation(this, R.anim.translate_animation_btn_otromodo);
+
+        btnPhone.startAnimation(animBtn);
 
         btnPhone.setOnClickListener(new View.OnClickListener() {
             @Override
