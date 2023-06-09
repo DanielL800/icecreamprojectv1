@@ -32,4 +32,5 @@
     <string name="btnVisibility">Visibilida de contraseña</string>
     <string name="btn_continuar">Continuar</string>
     <string name="btn_phoneOption">Otro método</string>
+    <string name="img_btn_arrowBack">ArrowBack</string>
 </resources>
