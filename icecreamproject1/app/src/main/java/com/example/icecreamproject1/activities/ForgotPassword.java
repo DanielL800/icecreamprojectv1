@@ -13,28 +13,14 @@ import com.example.icecreamproject1.R;
 
 public class ForgotPassword extends AppCompatActivity {
 
-    Button btnPhone;
+    Button sendSMS;
     ConstraintLayout sectionPhone;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
 
-        btnPhone = findViewById(R.id.btnOtroMetodo);
         sectionPhone = findViewById(R.id.recuperarconCelular);
-        Animation animBtn = AnimationUtils.loadAnimation(this, R.anim.translate_animation_btn_otromodo);
 
-        btnPhone.startAnimation(animBtn);
-
-        btnPhone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(sectionPhone.getVisibility() == View.VISIBLE){
-                    sectionPhone.setVisibility(View.GONE);//Ocultar la seccion
-                } else {
-                    sectionPhone.setVisibility(View.VISIBLE); //Mostrar la seccion
-                }
-            }
-        });
     }
 }

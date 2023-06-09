@@ -1,8 +1,10 @@
-package com.example.icecreamproject1;
+package com.example.icecreamproject1.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.icecreamproject1.R;
 
 public class RecuperarPassword extends AppCompatActivity {
 
