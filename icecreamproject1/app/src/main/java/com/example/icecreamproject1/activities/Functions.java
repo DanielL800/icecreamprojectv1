@@ -4,20 +4,26 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+
+import com.example.icecreamproject1.R;
 
 public class Functions {
 
     public Functions() {
     }
 
-    /*public static void animacionIce2(ImageView){
-        }*
+    /*
+    public void animationRotateIce(ImageView img, final Class<?> targetActivity){
+        Context context = img.getContext();
 
-        public static void arrow_back_function(ImageButton,){
-        }
-         */
+        Animation anim1 = AnimationUtils.loadAnimation(targetActivity, R.anim.rotacionimglenta);
+    }*/
+
+    //Permite volver a la activity anterior (requiere imageButton y clase final)
     public void handleArrowBackClickToLogin(ImageButton imgArrow, final Class<?> targetActivity){
         imgArrow.setOnClickListener(new View.OnClickListener() {
             @Override

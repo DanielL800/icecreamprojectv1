@@ -129,6 +129,7 @@
         android:layout_width="194dp"
         android:layout_height="52dp"
         android:backgroundTint="@color/btnclaro"
+        android:background="@drawable/btn_design_circular"
         android:text="@string/btn_continuar"
         android:textColor="@color/veridian"
         android:textSize="18sp"

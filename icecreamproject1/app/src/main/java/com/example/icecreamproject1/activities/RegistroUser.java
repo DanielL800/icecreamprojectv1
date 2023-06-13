@@ -27,16 +27,7 @@ public class RegistroUser extends AppCompatActivity {
         continuar = findViewById(R.id.btnContinuar);
         btnBack = findViewById(R.id.btnBack2);
 
-        Animation rotacionlenta = AnimationUtils.loadAnimation(RegistroUser.this, R.anim.rotacionimglenta);
-        imgHelado1.startAnimation(rotacionlenta);
-        continuar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Animation rotateAnim = AnimationUtils.loadAnimation(RegistroUser.this, R.anim.rotacionimgrapida);
-                imgHelado1.startAnimation(rotateAnim);
-            }
-        });
-
+        //Permite volver a la activity anterior (en este caso Login)
         Functions function1 = new Functions();
         function1.handleArrowBackClickToLogin(btnBack, Login.class);
     }
