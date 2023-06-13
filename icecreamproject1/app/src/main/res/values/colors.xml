@@ -3,7 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="main">#37DBFF</color>
-    <color name="gray_light">#d1d5db</color>
+    <color name="gray_light">#8B4F4F50</color>
     <color name="darksito_gray">#52525b</color>
     <color name="dark_gray">#171717</color>
     <color name="veridian">#043E3E</color>
@@ -13,4 +13,5 @@
     <color name="backgroundMain">#94a3b8</color>
     <color name="titlesLight">#f1f5f9</color>
     <color name="background_veridian">#044242</color>
+    <color name="btn_disabled">#3E95FFE5</color>
 </resources>

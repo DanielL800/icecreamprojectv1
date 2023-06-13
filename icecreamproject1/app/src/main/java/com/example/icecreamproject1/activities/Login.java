@@ -44,16 +44,18 @@ public class Login extends AppCompatActivity {
         showPassword = findViewById(R.id.imgBtnvisibility);
         btnForgot = findViewById(R.id.btnOlvidar);
 
+        //Evento btn ingresar -----------------
         btnIngreso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 user = correo.getText().toString();
                 contrasena = password.getText().toString();
                 Toast.makeText(Login.this, "Hola Usuario " + user, Toast.LENGTH_SHORT).show();
+                overridePendingTransition(R.anim.to_left, R.anim.from_right);
             }
         });
 
-        //OCULTACION DE CONTRASEÑA
+        //OCULTACION DE CONTRASEÑA------
         showPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,12 +75,13 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        //Inicio activity RECUPERAR CONTRASEÑA
+        //Inicio activity RECUPERAR CONTRASEÑA---------------
         btnForgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intentPass = new Intent(Login.this, ForgotPassword.class);
                 startActivity(intentPass);
+                overridePendingTransition(R.anim.to_top, R.anim.from_bottom);
             }
         });
 
@@ -88,6 +91,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent1 = new Intent(Login.this, RegistroUser.class);
                 startActivity(intent1);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
 
