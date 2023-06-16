@@ -31,18 +31,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        text1  = findViewById(R.id.editTextText);
-        text2 = findViewById(R.id.editTextText2);
-        btn = findViewById(R.id.btn1);
+        text1  = (EditText) findViewById(R.id.editTextText);
+        text2 = (EditText) findViewById(R.id.editTextText2);
+        btn = (Button) findViewById(R.id.btn1);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 user = text1.getText().toString();
                 password = text2.getText().toString();
-                //COndicion para validar
                 if (!user.isEmpty() && !user.isEmpty()){
-                    validarUsuario("https://helarticoproject.000webhostapp.com/apiicedreamproject/autenticar.php");
+                    validarusuario("https://helarticoproject.000webhostapp.com/apiicedreamproject/autenticar.php");
                 } else {
                     Toast.makeText(MainActivity.this, "Debes completar todos los campos", Toast.LENGTH_SHORT).show();
                 }
@@ -50,33 +49,34 @@ public class MainActivity extends AppCompatActivity {
         });
     } //Cierre OnCreate
 
-    private void validarUsuario(String URL){
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    if(!response.isEmpty()){
-                        Intent next = new Intent(MainActivity.this, Principal.class);
-                        startActivity(next);
-                    } else {
-                        Toast.makeText(MainActivity.this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
-                    }
+    private void validarusuario(String URL){
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if(!response.isEmpty()){
+                    Intent seguir = new Intent(MainActivity.this, Principal.class);
+                    startActivity(seguir);
+                }else{
+                    Toast.makeText(MainActivity.this, "Usuario y contraseña incorrecta", Toast.LENGTH_LONG).show();
                 }
-        }, new Response.ErrorListener(){
-            public void onErrorResponse(VolleyError error){
-                Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_LONG).show();
             }
         }){
             @Nullable
-                @Override
-                protected Map<String, String> getParams() throws AuthFailureError {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String>parametros= new HashMap<String,String>();
                 parametros.put("texto1",text1.getText().toString());
                 parametros.put("texto2",text2.getText().toString());
                 return parametros;
             }
-
         };
-            RequestQueue requestQueue = Volley.newRequestQueue(this);
-            requestQueue.add(stringRequest);
+        RequestQueue requestqueve = Volley.newRequestQueue(this);
+        requestqueve.add(stringRequest);
     }
 }
