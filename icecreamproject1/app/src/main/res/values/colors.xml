@@ -14,4 +14,8 @@
     <color name="titlesLight">#f1f5f9</color>
     <color name="background_veridian">#044242</color>
     <color name="btn_disabled">#3E95FFE5</color>
+
+    <!--Colores Menu Principal-->
+    <color name="backgroundMenu">#CEF6FF</color>
+    <color name="colorIconMenu">#1C1B1F</color>
 </resources>

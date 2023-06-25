@@ -1,5 +1,6 @@
 package com.example.icecreamproject1.activities;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,25 +13,32 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import java.util.HashMap;
+import java.util.Map;
+
 import com.example.icecreamproject1.R;
 
 public class Login extends AppCompatActivity {
 
-    private String idUsuario, nombres, usuario, email, telefono, rol, estado;
-    private String[] dataUser;
-
-    private String user, contrasena;
+    private String email, contrasena;
     private EditText correo;
      private EditText password;
-    private Button btnIngreso;
-    private Button btnRegistro;
-    private ImageButton arrowBack;
+     Button btnIngreso;
+    Button btnRegistro;
 
     //Button hiden password
     private boolean passVisible = false;
     private ImageButton showPassword; //visibility img
 
-    private Button btnForgot;
+    Button btnForgot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,14 +52,18 @@ public class Login extends AppCompatActivity {
         showPassword = findViewById(R.id.imgBtnvisibility);
         btnForgot = findViewById(R.id.btnOlvidar);
 
-        //Evento btn ingresar -----------------
+        //Evento btn ingresar -----------------//
         btnIngreso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                user = correo.getText().toString();
+                email= correo.getText().toString();
                 contrasena = password.getText().toString();
-                Toast.makeText(Login.this, "Hola Usuario " + user, Toast.LENGTH_SHORT).show();
-                overridePendingTransition(R.anim.to_left, R.anim.from_right);
+                if (!email.isEmpty() && !email.isEmpty()){
+                    validarusuario("https://helarticoproject.000webhostapp.com/apiicedreamproject/autenticar.php");
+                } else {
+                    Toast.makeText(Login.this, "Completa todos los campos", Toast.LENGTH_SHORT).show();
+                }
+                //overridePendingTransition(R.anim.to_left, R.anim.from_right);
             }
         });
 
@@ -81,7 +93,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentPass = new Intent(Login.this, ForgotPassword.class);
                 startActivity(intentPass);
-                overridePendingTransition(R.anim.to_top, R.anim.from_bottom);
+                //overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
 
@@ -91,9 +103,43 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent1 = new Intent(Login.this, RegistroUser.class);
                 startActivity(intent1);
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                //overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
 
+    }
+
+    //VALIDACION DE USUARIO BASE DE DATOS 000WEBHOST
+    private void validarusuario(String URL){
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if(!response.isEmpty()){
+                    Intent seguir = new Intent(Login.this, MainActivity.class);
+                    startActivity(seguir);
+                    //overridePendingTransition(R.anim.to_left, R.anim.from_right);
+                }else{
+                    Toast.makeText(Login.this, "Usuario y contraseña incorrecta", Toast.LENGTH_LONG).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(Login.this, error.toString(), Toast.LENGTH_LONG).show();
+            }
+        }){
+            @Nullable
+
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String>parametros= new HashMap<String,String>();
+                parametros.put("texto1",correo.getText().toString());
+                parametros.put("texto2",password.getText().toString());
+                return parametros;
+            }
+        };
+        RequestQueue requestqueve = Volley.newRequestQueue(this);
+        requestqueve.add(stringRequest);
     }
 }
