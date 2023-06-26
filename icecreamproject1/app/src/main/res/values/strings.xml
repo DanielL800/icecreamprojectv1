@@ -33,4 +33,9 @@
     <string name="btn_continuar">Continuar</string>
     <string name="btn_phoneOption">Otro método</string>
     <string name="img_btn_arrowBack">ArrowBack</string>
+
+    <!--MENU MAIN-->
+    <string name="nombreHelado">Nombre Helado</string>
+    <string name="tipoHelado">Tipo Helado</string>
+    <string name="btnAgregar">Agregar item</string>
 </resources>
