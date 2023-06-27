@@ -18,7 +18,10 @@
     <!--Colores Menu Principal-->
     <color name="backgroundMenu">#CEF6FF</color>
     <color name="colorIconMenu">#1C1B1F</color>
+    <color name="colorTextoBienvenido">#211D1D</color>
     <color name="color_card">#76D0E3</color>
-    <color name="color_texto_oscuro">#272727</color>
+    <color name="color_textoIcon_oscuro">#272727</color>
     <color name="color_texto_claro">#969696</color>
+    <color name="color_fondo_icon">#B5EEFA</color>
+    <color name="color_texto_claro_bienvenido">#797979</color>
 </resources>

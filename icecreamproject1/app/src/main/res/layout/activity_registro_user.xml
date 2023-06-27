@@ -105,7 +105,7 @@
         app:layout_constraintVertical_bias="0.41" />
 
     <EditText
-        android:id="@+id/edtDoc"
+        android:id="@+id/edTusuario"
         android:layout_width="240dp"
         android:layout_height="49dp"
         android:autofillHints="name"
@@ -169,4 +169,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imgVIce1"
         app:layout_constraintVertical_bias="0.933" />
+
+    <EditText
+        android:id="@+id/edTrol"
+        android:layout_width="237dp"
+        android:layout_height="46dp"
+        android:backgroundTint="@color/titlesLight"
+        android:ems="10"
+        android:hint="@string/rol"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/hintColor"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.318" />
+
+    <EditText
+        android:id="@+id/edTcontra"
+        android:layout_width="237dp"
+        android:layout_height="46dp"
+        android:backgroundTint="@color/titlesLight"
+        android:ems="10"
+        android:hint="@string/edTpassword"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/hintColor"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.836" />
 </androidx.constraintlayout.widget.ConstraintLayout>

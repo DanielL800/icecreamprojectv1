@@ -19,11 +19,13 @@
     <string name="btn_forgotPhone">Enviar SMS</string>
     <string name="edT_pass">Contraseña</string>
     <string name="edTConfirm_pass">Confirmar contraseña</string>
-    <string name="edtNombre">Nombres</string>
-    <string name="edtApellidos">Apellidos</string>
+    <string name="edtNombre">Nombre Completo</string>
+    <string name="edtApellidos">Nombre Usuario</string>
     <string name="edTDocument">Cedula</string>
     <string name="edTDocumento">Documento</string>
     <string name="edTCelular">Celular</string>
+    <string name="edTpassword">constraseña</string>
+    <string name="rol">INgrese su rol</string>
     <string name="edTdireccion">Agrega tu direccion de residencia</string>
 
     <string name="btn_ingreso">Ingresar</string>
@@ -38,4 +40,8 @@
     <string name="nombreHelado">Nombre Helado</string>
     <string name="tipoHelado">Tipo Helado</string>
     <string name="btnAgregar">Agregar item</string>
+    <string name="bienvenida">¡Hola Daniel!</string>
+    <string name="frase_bienvenida">¿Qué se te antoja probar hoy?</string>
+    <string name="descripcion_carrito">Ir al carrito de compra</string>
+    <string name="descripcion_usuario">Ir a las opciones de usuario</string>
 </resources>
